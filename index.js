@@ -17,14 +17,16 @@ for (let j = 1; j <= 50; j++) {
         box[i].className = 'box'
         box[i].id = 'row' + j + 'box' + i
         row[j].appendChild(box[i])
+
+        let boxCurr = document.getElementById(box[i].id)
+        boxCurr.addEventListener('mouseenter',(e) => {
+            if(e.buttons) {
+                boxCurr.style.backgroundColor = document.getElementById('colorPicker').value;
+            }
+        })
     }
 }
 
-
-
-
-
-//
 outerContainer.addEventListener('click',(e) => {
     let boxClicked = document.getElementById(e.srcElement.id)
 //    boxClicked.style.backgroundColor = selColor
@@ -35,6 +37,4 @@ outerContainer.addEventListener('click',(e) => {
 //     let boxClicked = document.getElementById(e.srcElement.id)
 //     selColor = boxClicked.id
 //     document.getElementById('selected-color').innerText = "Selected color: " + selColor
-
 // })
-
