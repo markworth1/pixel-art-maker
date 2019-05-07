@@ -1,0 +1,28 @@
+.outer-container {
+    border: 20px solid gray;
+
+}
+
+.row {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.box {
+    height: 10px;
+    width: 10px;
+    border: 1px inset silver;
+}
+
+.palette-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+.palette-item {
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    border-radius: 20px;
+}
