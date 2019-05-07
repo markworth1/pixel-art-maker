@@ -1,5 +1,5 @@
-let selColor = 'white';
-document.getElementById('selected-color').innerText = "Selected color: " + selColor
+// let selColor = 'white';
+// document.getElementById('selected-color').innerText = "Selected color: " + selColor
 
 const outerContainer = document.querySelector('.outer-container')
 const paletteContainer = document.querySelector('.palette-container')
@@ -26,18 +26,15 @@ for (let j = 1; j <= 50; j++) {
 
 //
 outerContainer.addEventListener('click',(e) => {
-    console.log(e)
     let boxClicked = document.getElementById(e.srcElement.id)
-    boxClicked.style.backgroundColor = selColor
-    console.log('you clicked: ' + boxClicked.id)
+//    boxClicked.style.backgroundColor = selColor
+    boxClicked.style.backgroundColor = document.getElementById('colorPicker').value;
 })
 
-paletteContainer.addEventListener('click',(e) => {
-    console.log(e)
-    let boxClicked = document.getElementById(e.srcElement.id)
-    selColor = boxClicked.id
-    console.log('you clicked: ' + selColor)
-    document.getElementById('selected-color').innerText = "Selected color: " + selColor
+// paletteContainer.addEventListener('click',(e) => {
+//     let boxClicked = document.getElementById(e.srcElement.id)
+//     selColor = boxClicked.id
+//     document.getElementById('selected-color').innerText = "Selected color: " + selColor
 
-})
+// })
 
